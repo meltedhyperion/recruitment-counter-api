@@ -9,7 +9,7 @@ interface statesData {
 
 interface RecruitmentInfo {
   totalRegistrations: number;
-  tech: statesData;
+  technical: statesData;
   editorial: statesData;
   corporate: statesData;
   events: statesData;
@@ -25,7 +25,7 @@ export const handleGetRecruitmentInfo = async (): Promise<RecruitmentInfo> => {
       .toArray();
     const stats = {
       totalRegistrations: allApplications.length,
-      tech: { draft: 0, pending: 0, accepted: 0 },
+      technical: { draft: 0, pending: 0, accepted: 0 },
       editorial: { draft: 0, pending: 0, accepted: 0 },
       corporate: { draft: 0, pending: 0, accepted: 0 },
       events: { draft: 0, pending: 0, accepted: 0 },
