@@ -1,7 +1,7 @@
 import db from '../../loaders/database';
 import LoggerInstance from '../../loaders/logger';
 
-interface recruitmentInfo {
+interface RecruitmentInfo {
   totalRegistrations: number;
   tech: {
     draft: number;
@@ -25,7 +25,7 @@ interface recruitmentInfo {
   };
 }
 
-export const handleGetRecruitmentInfo = async (): Promise<recruitmentInfo> => {
+export const handleGetRecruitmentInfo = async (): Promise<RecruitmentInfo> => {
   try {
     const allApplications = await (
       await db()
