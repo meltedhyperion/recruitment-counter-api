@@ -1,28 +1,18 @@
 import db from '../../loaders/database';
 import LoggerInstance from '../../loaders/logger';
 
+interface statesData {
+  draft: number;
+  pending: number;
+  accepted: number;
+}
+
 interface RecruitmentInfo {
   totalRegistrations: number;
-  tech: {
-    draft: number;
-    pending: number;
-    accepted: number;
-  };
-  editorial: {
-    draft: number;
-    pending: number;
-    accepted: number;
-  };
-  corporate: {
-    draft: number;
-    pending: number;
-    accepted: number;
-  };
-  events: {
-    draft: number;
-    pending: number;
-    accepted: number;
-  };
+  tech: statesData;
+  editorial: statesData;
+  corporate: statesData;
+  events: statesData;
 }
 
 export const handleGetRecruitmentInfo = async (): Promise<RecruitmentInfo> => {
