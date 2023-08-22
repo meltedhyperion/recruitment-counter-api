@@ -4,7 +4,7 @@ import { counterapiRouter } from './counterapi.controller';
 export default (): Router => {
   const app = Router();
 
-  app.use('/counterapi', counterapiRouter);
+  app.use('/getInfo', counterapiRouter);
 
   return app;
 };
