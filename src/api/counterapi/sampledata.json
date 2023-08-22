@@ -1,0 +1,330 @@
+{
+  "register_document": {
+    "_id": {
+      "$oid": "64e2774d009aaab274b12a3f"
+    },
+    "regNo": "RA2111027010126",
+    "name": "ARYAN SINGH",
+    "year": 3,
+    "email": "ar8930@srmist.edu.in",
+    "gender": "male",
+    "branch": "cse_w/s_big_data_analytics",
+    "resume": "https://recruitment-23.s3.ap-south-1.amazonaws.com/resume/64e2774d009aaab274b12a3f.pdf",
+    "contact": "8294107355",
+    "createdAt": {
+      "$numberLong": "1692563277"
+    },
+    "notifications": [
+      {
+        "timestamp": {
+          "$date": "2023-08-20T20:27:57.885Z"
+        },
+        "markdown": "Ruh-roh, welcome, aspiring sleuth! The trail to becoming an SRMKZILLian is wide open, just like Scooby's appetite. Kick off your adventure by cooking up a new application! #Recruitment2023",
+        "text": "Hello, dreamer. Welcome to #Recruitment2023. Your pathway to becoming an SRMKZILLian starts right here. Create a new application to get started."
+      },
+      {
+        "timestamp": {
+          "$date": "2023-08-21T15:10:18.341Z"
+        },
+        "markdown": "*Zoinks,* you've cracked the case, detective! Your new application for the content writing domain has been created. Finish it on time and let's see what mysteries unfold! #SRMKZILLianAdventures",
+        "text": "Your application has been created."
+      },
+      {
+        "timestamp": {
+          "$date": "2023-08-21T15:11:34.978Z"
+        },
+        "markdown": "*Zoinks, creator!* Your draft for content writing domain took a disappearing act, but fear not! Just a Scooby-Doo away from rewriting your mystery.",
+        "text": "Your draft has been deleted."
+      },
+      {
+        "timestamp": {
+          "$date": "2023-08-21T15:12:17.598Z"
+        },
+        "markdown": "*Zoinks,* you've cracked the case, detective! Your new application for the vfx domain has been created. Finish it on time and let's see what mysteries unfold! #SRMKZILLianAdventures",
+        "text": "Your application has been created."
+      },
+      {
+        "timestamp": {
+          "$date": "2023-08-21T15:13:15.102Z"
+        },
+        "markdown": "*Zoinks, creator!* Your draft for vfx domain took a disappearing act, but fear not! Just a Scooby-Doo away from rewriting your mystery.",
+        "text": "Your draft has been deleted."
+      },
+      {
+        "timestamp": {
+          "$date": "2023-08-21T15:13:33.436Z"
+        },
+        "markdown": "*Zoinks,* you've cracked the case, detective! Your new application for the content writing domain has been created. Finish it on time and let's see what mysteries unfold! #SRMKZILLianAdventures",
+        "text": "Your application has been created."
+      },
+      {
+        "timestamp": {
+          "$date": "2023-08-21T15:20:23.056Z"
+        },
+        "markdown": "*Zoinks, creator!* Your draft for content writing domain took a disappearing act, but fear not! Just a Scooby-Doo away from rewriting your mystery.",
+        "text": "Your draft has been deleted."
+      },
+      {
+        "timestamp": {
+          "$date": "2023-08-21T15:20:42.825Z"
+        },
+        "markdown": "*Zoinks,* you've cracked the case, detective! Your new application for the technical domain has been created. Finish it on time and let's see what mysteries unfold! #SRMKZILLianAdventures",
+        "text": "Your application has been created."
+      },
+      {
+        "timestamp": {
+          "$date": "2023-08-21T15:21:18.801Z"
+        },
+        "markdown": "*Jinkies,* your application for the technical domain is in the vault, awaiting our sleuthy scrutiny! Stay tuned for the unraveling excitement! #SRMKZILLianAdventures",
+        "text": "Your application is under review."
+      },
+      {
+        "timestamp": {
+          "$date": "2023-08-21T15:27:24.411Z"
+        },
+        "markdown": "*Zoinks,* you've cracked the case, detective! Your new application for the new domain has been created. Finish it on time and let's see what mysteries unfold! #SRMKZILLianAdventures",
+        "text": "Your application has been created."
+      },
+      {
+        "timestamp": {
+          "$date": "2023-08-21T15:28:25.634Z"
+        },
+        "markdown": "*Zoinks,* you've cracked the case, detective! Your new application for the vfx domain has been created. Finish it on time and let's see what mysteries unfold! #SRMKZILLianAdventures",
+        "text": "Your application has been created."
+      },
+      {
+        "timestamp": {
+          "$date": "2023-08-21T15:30:30.139Z"
+        },
+        "markdown": "*Zoinks,* you've cracked the case, detective! Your new application for the technical domain has been created. Finish it on time and let's see what mysteries unfold! #SRMKZILLianAdventures",
+        "text": "Your application has been created."
+      }
+    ],
+    "application": [
+      {
+        "status": "draft",
+        "domain": "tech",
+        "appliedAt": {
+          "$date": "2023-08-21T15:27:24.280Z"
+        },
+        "updatedAt": {
+          "$date": "2023-08-21T15:27:24.280Z"
+        },
+        "createdAt": {
+          "$date": "2023-08-21T15:27:24.280Z"
+        }
+      },
+      {
+        "createdAt": {
+          "$date": "2023-08-21T15:28:25.472Z"
+        }
+      },
+      {
+        "status": "pending",
+        "domain": "editorial",
+        "appliedAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        },
+        "updatedAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        },
+        "createdAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        }
+      },
+      {
+        "status": "accepted",
+        "domain": "corporate",
+        "appliedAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        },
+        "updatedAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        },
+        "createdAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        }
+      },
+      {
+        "status": "accepted",
+        "domain": "events",
+        "appliedAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        },
+        "updatedAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        },
+        "createdAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        }
+      }
+    ],
+    "socials": {
+      "github": "",
+      "linkedin": "",
+      "portfolio": ""
+    }
+  },
+
+  "response": {
+    "Tech": {
+      "Draft": 0,
+      "Pending": 0,
+      "Accepted": 0
+    },
+    "Edi": { "Draft": 0, "Pending": 0, "Accepted": 0 },
+    "Corp": { "Draft": 0, "Pending": 0, "Accepted": 0 },
+    "Events": { "Draft": 0, "Pending": 0, "Accepted": 0 },
+    "total registrations": ""
+  },
+
+  "different_sample": {
+    "_id": {
+      "$oid": "64e2774d009aaab274b12a3f"
+    },
+    "regNo": "RA2111027010126",
+    "name": "ARYAN SINGH",
+    "year": 3,
+    "application": [
+      {
+        "status": "draft",
+        "domain": "tech",
+        "appliedAt": {
+          "$date": "2023-08-21T15:27:24.280Z"
+        },
+        "updatedAt": {
+          "$date": "2023-08-21T15:27:24.280Z"
+        },
+        "createdAt": {
+          "$date": "2023-08-21T15:27:24.280Z"
+        }
+      },
+      {
+        "createdAt": {
+          "$date": "2023-08-21T15:28:25.472Z"
+        }
+      },
+      {
+        "status": "pending",
+        "domain": "editorial",
+        "appliedAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        },
+        "updatedAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        },
+        "createdAt": {
+          "$date": "2023-08-21T15:30:30.012Z"
+        }
+      }
+    ]
+  },
+
+  "ultimatum": [
+    {
+      "application": [
+        {
+          "status": "draft",
+          "domain": "tech",
+          "appliedAt": {
+            "$date": "2023-08-21T15:27:24.280Z"
+          },
+          "updatedAt": {
+            "$date": "2023-08-21T15:27:24.280Z"
+          },
+          "createdAt": {
+            "$date": "2023-08-21T15:27:24.280Z"
+          }
+        },
+        {
+          "createdAt": {
+            "$date": "2023-08-21T15:28:25.472Z"
+          }
+        },
+        {
+          "status": "pending",
+          "domain": "editorial",
+          "appliedAt": {
+            "$date": "2023-08-21T15:30:30.012Z"
+          },
+          "updatedAt": {
+            "$date": "2023-08-21T15:30:30.012Z"
+          },
+          "createdAt": {
+            "$date": "2023-08-21T15:30:30.012Z"
+          }
+        }
+      ]
+    },
+    {
+      "application": [
+        {
+          "status": "draft",
+          "domain": "editorial",
+          "appliedAt": {
+            "$date": "2023-08-21T15:27:24.280Z"
+          },
+          "updatedAt": {
+            "$date": "2023-08-21T15:27:24.280Z"
+          },
+          "createdAt": {
+            "$date": "2023-08-21T15:27:24.280Z"
+          }
+        },
+        {
+          "createdAt": {
+            "$date": "2023-08-21T15:28:25.472Z"
+          }
+        },
+        {
+          "status": "pending",
+          "domain": "corporate",
+          "appliedAt": {
+            "$date": "2023-08-21T15:30:30.012Z"
+          },
+          "updatedAt": {
+            "$date": "2023-08-21T15:30:30.012Z"
+          },
+          "createdAt": {
+            "$date": "2023-08-21T15:30:30.012Z"
+          }
+        }
+      ]
+    },
+    {
+      "application": [
+        {
+          "status": "draft",
+          "domain": "events",
+          "appliedAt": {
+            "$date": "2023-08-21T15:27:24.280Z"
+          },
+          "updatedAt": {
+            "$date": "2023-08-21T15:27:24.280Z"
+          },
+          "createdAt": {
+            "$date": "2023-08-21T15:27:24.280Z"
+          }
+        },
+        {
+          "createdAt": {
+            "$date": "2023-08-21T15:28:25.472Z"
+          }
+        },
+        {
+          "status": "accepted",
+          "domain": "tech",
+          "appliedAt": {
+            "$date": "2023-08-21T15:30:30.012Z"
+          },
+          "updatedAt": {
+            "$date": "2023-08-21T15:30:30.012Z"
+          },
+          "createdAt": {
+            "$date": "2023-08-21T15:30:30.012Z"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"counterapi.router.js","sourceRoot":"","sources":["../../../src/api/counterapi/counterapi.router.ts"],"names":[],"mappings":";;AAAA,qCAAiC;AACjC,mEAA2D;AAE3D,kBAAe,GAAW,EAAE;IAC1B,MAAM,GAAG,GAAG,IAAA,gBAAM,GAAE,CAAC;IAErB,GAAG,CAAC,GAAG,CAAC,aAAa,EAAE,wCAAgB,CAAC,CAAC;IAEzC,OAAO,GAAG,CAAC;AACb,CAAC,CAAC"}

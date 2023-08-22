@@ -27,5 +27,5 @@
     "winston": "^3.3.3"
   },
   "author": "Ash",
-  "license": ""
+  "license": "MIT"
 }

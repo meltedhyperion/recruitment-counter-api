@@ -1,9 +1,10 @@
 import { Router } from 'express';
+import counterapiRouter from './counterapi/counterapi.router';
 
 export default (): Router => {
   const app = Router();
 
-  //TODO: add routes here...
+  app.use('/get-recruitment-info', counterapiRouter());
 
   return app;
 };
