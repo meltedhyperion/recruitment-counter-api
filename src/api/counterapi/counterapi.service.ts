@@ -21,6 +21,9 @@ interface StatesData {
 
 interface RecruitmentInfo {
   totalRegistrations: number;
+  totalDraftApplication: number;
+  totalPendingApplication: number;
+  totalAcceptedApplication: number;
   technical: StatesData;
   corporate: StatesData;
   events: StatesData;
@@ -41,6 +44,9 @@ export const handleGetRecruitmentInfo = async (): Promise<RecruitmentInfo> => {
 
     const stats: RecruitmentInfo = {
       totalRegistrations: allApplications.length,
+      totalDraftApplication: 0,
+      totalPendingApplication: 0,
+      totalAcceptedApplication: 0,
       technical: { draft: 0, pending: 0, accepted: 0 },
       gfx: { draft: 0, pending: 0, accepted: 0 },
       vfx: { draft: 0, pending: 0, accepted: 0 },
@@ -54,84 +60,22 @@ export const handleGetRecruitmentInfo = async (): Promise<RecruitmentInfo> => {
       doc.application.forEach((app: Application) => {
         const { domain, status } = app;
 
-        if (domain in stats) {
+        if (status && domain && domain in stats && status in stats[domain]) {
+          stats[domain][status] += 1;
           if (status === 'draft') {
-            stats[domain]['draft'] += 1;
+            stats.totalDraftApplication += 1;
           } else if (status === 'pending') {
-            stats[domain]['pending'] += 1;
+            stats.totalPendingApplication += 1;
           } else if (status === 'accepted') {
-            stats[domain]['accepted'] += 1;
+            stats.totalAcceptedApplication += 1;
           }
         }
       });
     });
 
     return stats;
-
-    // -----------------
-
-    // const stats = await (await db()).collection('registrations').aggregate([
-    //   {
-    //     $unwind: '$application',
-    //   },
-    //   {
-    //     $group: {
-    //       _id: {
-    //         domain: '$application.domain',
-    //         status: '$application.status',
-    //       },
-    //       count: { $sum: 1 },
-    //     },
-    //   },
-    //   {
-    //     $group: {
-    //       _id: '$_id.domain',
-    //       counts: {
-    //         $push: {
-    //           status: '$_id.status',
-    //           count: '$count',
-    //         },
-    //       },
-    //     },
-    //   },
-    //   {
-    //     $project: {
-    //       _id: 0,
-    //       domain: '$_id',
-    //       counts: 1,
-    //     },
-    //   },
-    // ]);
-
-    // const statsCursor = await stats.toArray();
-    // console.log(statsCursor);
-
-    // const totalRegistrations = statsCursor.reduce((acc, domainStats) => {
-    //   return acc + domainStats.counts.reduce((statusAcc, count) => count.count, 0);
-    // }, 0);
-
-    // const formattedStats = {
-    //   total_registrations: totalRegistrations,
-    // };
-    // const domainFinalstats = {};
-
-    // stats.forEach(domainStat => {
-    //   console.log('domainstat', domainStat);
-    //   const statusCounts = domainStat.counts.reduce((acc, count) => {
-    //     acc[count.status] = count.count;
-    //     console.log('acc', acc);
-    //     return acc;
-    //   }, {});
-    //   domainFinalstats[domainStat.domain] = {
-    //     draft: statusCounts.draft || 0,
-    //     pending: statusCounts.pending || 0,
-    //     accepted: statusCounts.accepted || 0,
-    //   };
-    // });
-    // console.log(domainFinalstats);
-    // return formattedStats;
   } catch (err) {
-    LoggerInstance.error('Error while getting recruitment info: %o', err);
+    LoggerInstance.error('Error while getting recruitment info: ', err);
     throw err;
   }
 };
