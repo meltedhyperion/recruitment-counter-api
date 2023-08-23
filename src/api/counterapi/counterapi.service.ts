@@ -1,7 +1,19 @@
 import db from '../../loaders/database';
 import LoggerInstance from '../../loaders/logger';
 
-interface statesData {
+interface Application {
+  domain: string;
+  status: string;
+  appliedAt?: Date;
+  updatedAt?: Date;
+  createdAt?: Date;
+}
+
+interface Applications {
+  application: Application[];
+}
+
+interface StatesData {
   draft: number;
   pending: number;
   accepted: number;
@@ -9,10 +21,13 @@ interface statesData {
 
 interface RecruitmentInfo {
   totalRegistrations: number;
-  technical: statesData;
-  editorial: statesData;
-  corporate: statesData;
-  events: statesData;
+  technical: StatesData;
+  corporate: StatesData;
+  events: StatesData;
+  content_writing: StatesData;
+  vfx: StatesData;
+  gfx: StatesData;
+  photography: StatesData;
 }
 
 export const handleGetRecruitmentInfo = async (): Promise<RecruitmentInfo> => {
@@ -23,22 +38,30 @@ export const handleGetRecruitmentInfo = async (): Promise<RecruitmentInfo> => {
       .collection('registrations')
       .find({}, { projection: { _id: 0, application: 1 } })
       .toArray();
-    const stats = {
+
+    const stats: RecruitmentInfo = {
       totalRegistrations: allApplications.length,
       technical: { draft: 0, pending: 0, accepted: 0 },
-      editorial: { draft: 0, pending: 0, accepted: 0 },
+      gfx: { draft: 0, pending: 0, accepted: 0 },
+      vfx: { draft: 0, pending: 0, accepted: 0 },
+      content_writing: { draft: 0, pending: 0, accepted: 0 },
+      photography: { draft: 0, pending: 0, accepted: 0 },
       corporate: { draft: 0, pending: 0, accepted: 0 },
       events: { draft: 0, pending: 0, accepted: 0 },
     };
 
-    allApplications.forEach(doc => {
-      doc.application.forEach(app => {
-        if (app.status === 'draft') {
-          stats[app.domain]['draft'] += 1;
-        } else if (app.status === 'pending') {
-          stats[app.domain]['pending'] += 1;
-        } else if (app.status === 'accepted') {
-          stats[app.domain]['accepted'] += 1;
+    allApplications.forEach((doc: Applications) => {
+      doc.application.forEach((app: Application) => {
+        const { domain, status } = app;
+
+        if (domain in stats) {
+          if (status === 'draft') {
+            stats[domain]['draft'] += 1;
+          } else if (status === 'pending') {
+            stats[domain]['pending'] += 1;
+          } else if (status === 'accepted') {
+            stats[domain]['accepted'] += 1;
+          }
         }
       });
     });
