@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import counterapiRouter from './counterapi/counterapi.router';
+import { handleRecruitmentStats } from './counterapi/counterapi.controller';
 
 export default (): Router => {
   const app = Router();
 
-  app.use('/recruitments', counterapiRouter());
+  app.get('/recruitments/stats', handleRecruitmentStats);
 
   return app;
 };
