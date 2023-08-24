@@ -94,7 +94,7 @@ export const handleGetRecruitmentInfo = async (): Promise<RecruitmentInfo> => {
     const allApplications = await (
       await db()
     )
-      .collection('registrations')
+      .collection('users')
       .find({ email: { $nin: excludedEmails } }, { projection: { _id: 0, application: 1 } })
       .toArray();
 
